@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGnarok - Retrieval Augmented Generation</title>
+    <!-- Add favicon link below -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/stormbreaker.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .logo-icon {
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+        .logo-icon:hover {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="lightning-effect"></div>
+    
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='images/stormbreaker.png') }}" alt="Thor's Hammer" class="logo-icon">
+            <h1>RAGnarok</h1>
+            <p class="subtitle">The Mighty Retrieval Augmented Generation System</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="query-input" placeholder="Ask me anything...">
+            <button id="submit-btn">
+                <i class="fas fa-bolt hammer-icon"></i> Ask
+            </button>
+        </div>
+
+        <div class="results-container hidden" id="results-container">
+            <div class="answer-section">
+                <h2>Divine Answer</h2>
+                <div id="answer-content" class="content-box"></div>
+            </div>
+            
+            <div class="context-section">
+                <h2>Sacred Knowledge</h2>
+                <div id="context-content" class="content-box context-box"></div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Summoning wisdom from Asgard...</p>
+        </div>
+
+        <div id="error-message" class="error-message hidden"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 RAGnarok - Powered by the Bifrost Bridge of AI</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
