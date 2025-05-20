@@ -1,4 +1,4 @@
-# Information Retrieval System
+# Ragnarok
 
 A document retrieval and question-answering system that uses vector embeddings to find relevant documents and Google's Gemini model to generate answers based on the retrieved context.
 
